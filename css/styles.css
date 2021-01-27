@@ -6,8 +6,10 @@
   padding: 0;
 }
 
+html,
 body {
   font-family: 'Roboto', sans-serif;
+  background: linear-gradient(#3d6483, #9198e5);
   color: black;
   /* Push to bottom */
   display: flex;
@@ -18,7 +20,7 @@ body {
 
 body nav {
   width: 100%;
-  background-color: lightblue;
+  background-color: transparent;
 }
 
 body nav .menu {
@@ -38,18 +40,13 @@ body nav .menu a {
   padding: 1rem 2rem;
   font-size: 1.2rem;
   text-decoration: none;
-  color: black;
+  color: white;
   transition-duration: 0.2s;
 }
 
 body nav .menu a:hover {
-  background-color: white;
-}
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  overflow: auto;
+  background-color: lightblue;
+  color: black;
 }
 
 header {
@@ -68,59 +65,20 @@ header .info {
   align-items: center;
 }
 
-header h1 {
-  font-size: 60px;
-  text-align: center;
-}
-
-header p {
-  text-align: center;
-  margin: 1rem;
-}
-
-header button {
-  text-decoration: none;
-  background-color: #0f479a;
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  font-size: 1.5rem;
-  transition-duration: 0.2s;
-}
-
-header button:hover {
-  background-color: lightblue;
-  color: black;
-}
-
 header img {
   width: 40vw;
   border-radius: 8px;
+  margin-bottom: 2rem;
 }
 
-.counters {
-  background: #0f479a;
-  color: #fff;
-  padding: 20px 10px;
-  border-top: 3px lightskyblue solid;
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-.counters .container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
+.container * {
   text-align: center;
-}
-
-.counters i {
-  color: lightskyblue;
-  margin-bottom: 5px;
-}
-
-.counters .counter {
-  font-size: 25px;
-  margin: 10px 0;
 }
 
 @media (max-width: 700px) {
@@ -133,6 +91,25 @@ header img {
     border-bottom: 1px lightskyblue solid;
     padding-bottom: 20px;
   }
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+footer h3 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+footer .email {
+  margin: 1rem;
+}
+
+footer p {
+  text-align: center;
 }
 
 /* Extra small devices (phones, 600px and down) */
