@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+  /* Push to bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+}
+
+body nav {
+  width: 100%;
+  background-color: lightblue;
+}
+
+body nav .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+  width: 80%;
+  margin: auto;
+}
+
+body nav .menu li {
+  padding: 1rem 0;
+}
+
+body nav .menu a {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: black;
+  transition-duration: 0.2s;
+}
+
+body nav .menu a:hover {
+  background-color: white;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+header {
+  flex: 1;
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+header .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+header p {
+  text-align: center;
+  margin: 1rem;
+}
+
+header button {
+  text-decoration: none;
+  background-color: #0f479a;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  transition-duration: 0.2s;
+}
+
+header button:hover {
+  background-color: lightblue;
+  color: black;
+}
+
+header img {
+  width: 40vw;
+  border-radius: 8px;
+}
+
+.counters {
+  background: #0f479a;
+  color: #fff;
+  padding: 40px 20px;
+  border-top: 3px lightskyblue solid;
+}
+
+.counters .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  text-align: center;
+}
+
+.counters i {
+  color: lightskyblue;
+  margin-bottom: 5px;
+}
+
+.counters .counter {
+  font-size: 45px;
+  margin: 10px 0;
+}
+
+@media (max-width: 700px) {
+  .counters .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .counters .container > div:nth-of-type(1),
+  .counters .container > div:nth-of-type(2) {
+    border-bottom: 1px lightskyblue solid;
+    padding-bottom: 20px;
+  }
+}
